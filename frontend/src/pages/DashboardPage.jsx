@@ -89,7 +89,7 @@ function SectionHeader({ title, sub, children }) {
   )
 }
 
-// ─── Skeleton Block ───────────────────────────────────────────────────────────
+// Skeleton Block 
 
 function SkeletonBlock({ h = 'h-64' }) {
   return <div className={`${h} bg-slate-100 rounded-2xl animate-pulse`} />
@@ -100,7 +100,6 @@ function SkeletonBlock({ h = 'h-64' }) {
 export default function DashboardPage() {
   const { user } = useAuth()
 
-  // ── State ──
   const [summary, setSummary] = useState(null)
   const [summaryLoading, setSummaryLoading] = useState(true)
 
@@ -114,7 +113,7 @@ export default function DashboardPage() {
   const [detailData, setDetailData] = useState(null)
   const [detailLoading, setDetailLoading] = useState(true)
 
-  // ── Fetch summary ──
+  // Fetch summary
   const fetchSummary = useCallback(async () => {
     setSummaryLoading(true)
     try {
@@ -124,7 +123,7 @@ export default function DashboardPage() {
     finally { setSummaryLoading(false) }
   }, [])
 
-  // ── Fetch yearly chart ──
+  // Fetch yearly chart
   const fetchMonthly = useCallback(async (year) => {
     setMonthlyLoading(true)
     try {
