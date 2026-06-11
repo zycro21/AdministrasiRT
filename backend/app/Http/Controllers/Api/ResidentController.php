@@ -21,7 +21,7 @@ class ResidentController extends Controller
                         ->orWhere('phone_number', 'like', "%{$search}%");
                 });
             })
-            ->paginate(10);
+            ->paginate(request('per_page', 10));
 
         return response()->json($residents);
     }

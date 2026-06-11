@@ -12,16 +12,6 @@ Sistem ini dibuat untuk membantu pengelolaan administrasi RT pada sebuah perumah
 * Iuran Satpam Rp100.000/bulan
 * Iuran Kebersihan Rp15.000/bulan
 
-Fitur utama:
-
-* Manajemen Penghuni
-* Manajemen Rumah
-* Riwayat Penghuni Rumah (Historical)
-* Tagihan Bulanan
-* Pembayaran Iuran
-* Pengeluaran RT
-* Dashboard dan Laporan Keuangan
-
 ---
 
 # Tech Stack
@@ -290,8 +280,6 @@ Contoh data:
 * Token Listrik Pos Satpam
 * Perbaikan Jalan
 * Perbaikan Selokan
-* Perawatan Taman
-* Pembelian Peralatan Kebersihan
 
 ---
 

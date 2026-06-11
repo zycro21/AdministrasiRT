@@ -12,7 +12,7 @@ class PaymentTypeController extends Controller
 {
     public function index()
     {
-        return PaymentType::latest()->paginate(20);
+        return PaymentType::latest()->paginate(request('per_page', 20));
     }
 
     public function store(StorePaymentTypeRequest $request)

@@ -18,11 +18,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     // Residents
-    Route::get('residents/stats', [ResidentController::class, 'stats']); 
+    Route::get('residents/stats', [ResidentController::class, 'stats']);
     Route::get('residents/{resident}/detail', [ResidentController::class, 'detail']);
     Route::apiResource('residents', ResidentController::class);
 
     // Houses
+    Route::get('houses/stats', [HouseController::class, 'stats']);
     Route::apiResource('houses', HouseController::class);
     Route::get('houses/{house}/detail', [HouseController::class, 'detail']);
     Route::post('houses/{house}/assign-resident', [HouseController::class, 'assignResident']);

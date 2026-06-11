@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 
 const navItems = [
   {
-    label: 'Dashboard',
+    label: 'Overview',
     to: '/overview',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>

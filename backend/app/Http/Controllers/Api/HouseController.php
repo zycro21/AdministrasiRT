@@ -18,11 +18,15 @@ class HouseController extends Controller
     public function index(): JsonResponse
     {
         $houses = House::latest()
-            ->paginate(10);
+            ->when(request('search'), function ($query, $search) {
+                $query->where(function ($q) use ($search) {
+                    $q->where('house_number', 'like', "%{$search}%")
+                        ->orWhere('address', 'like', "%{$search}%");
+                });
+            })
+            ->paginate(request('per_page', 10));
 
-        return response()->json(
-            $houses
-        );
+        return response()->json($houses);
     }
 
     public function show(
@@ -125,6 +129,15 @@ class HouseController extends Controller
         return response()->json([
             'message' => 'House berhasil dihapus',
         ]);
+    }
+
+    public function stats(): JsonResponse
+    {
+        $total   = House::count();
+        $occupied = House::where('occupancy_status', 'occupied')->count();
+        $vacant   = House::where('occupancy_status', 'vacant')->count();
+
+        return response()->json(compact('total', 'occupied', 'vacant'));
     }
 
     public function assignResident(

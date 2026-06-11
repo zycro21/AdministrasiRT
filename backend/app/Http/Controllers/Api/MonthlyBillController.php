@@ -16,7 +16,8 @@ class MonthlyBillController extends Controller
         return MonthlyBill::with([
             'resident',
             'house',
-            'paymentType'
+            'paymentType',
+            'payments'
         ])
             ->when($request->month, function ($q) use ($request) {
                 $q->whereMonth('bill_month', date('m', strtotime($request->month)))

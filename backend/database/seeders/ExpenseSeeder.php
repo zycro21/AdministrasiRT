@@ -13,7 +13,7 @@ class ExpenseSeeder extends Seeder
 
             [
                 'title' => 'Gaji Satpam Januari',
-                'amount' => 3000000,
+                'amount' => 300000,
                 'expense_date' => '2026-01-05',
             ],
 
@@ -25,13 +25,13 @@ class ExpenseSeeder extends Seeder
 
             [
                 'title' => 'Perbaikan Jalan',
-                'amount' => 5000000,
+                'amount' => 500000,
                 'expense_date' => '2026-03-15',
             ],
 
             [
                 'title' => 'Perbaikan Selokan',
-                'amount' => 2500000,
+                'amount' => 250000,
                 'expense_date' => '2026-05-20',
             ],
         ];

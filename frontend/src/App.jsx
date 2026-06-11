@@ -5,6 +5,9 @@ import AppLayout from './components/layout/AppLayout'
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
 import ResidentPage from './pages/residents/ResidentsPage'
+import HousePage from './pages/houses/HousesPage'
+import MonthlyBillsPage from './pages/monthly-bills/MonthlyBillsPage'
+import ExpensesPage from './pages/expenses/ExpensesPage'
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
@@ -29,7 +32,9 @@ export default function App() {
             <Route element={<ProtectedRoute><AppLayout /></ProtectedRoute>}>
               <Route path="/overview" element={<DashboardPage />} />
               <Route path="/residents" element={<ResidentPage />} />
-              
+              <Route path="/houses" element={<HousePage />} />
+              <Route path="/monthly-bills" element={<MonthlyBillsPage />} />
+              <Route path="/expenses" element={<ExpensesPage />} />
             </Route>
 
             <Route path="/" element={<Navigate to="/login" replace />} />
