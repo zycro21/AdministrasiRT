@@ -107,7 +107,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Sesuaikan username dan password MySQL dengan komputer masing-masing.
+Sesuaikan username dan password MySQL di masing-masing komputer/laptop.
 
 ---
 
@@ -268,7 +268,7 @@ Untuk beberapa bulan terakhir.
 
 Status tagihan dapat berupa:
 
-* Pending
+* Pending (tapi di seeder dibuat pending semua)
 * Paid
 * Partially Paid
 
@@ -283,37 +283,12 @@ Contoh data:
 
 ---
 
-# Screenshot Fitur
-
-Tambahkan screenshot hasil implementasi pada folder:
-
-```text
-/screenshots
-```
-
-Contoh:
-
-```text
-screenshots/
-├── login.png
-├── dashboard.png
-├── residents.png
-├── houses.png
-├── house-detail.png
-├── monthly-bills.png
-├── payments.png
-├── expenses.png
-└── reports.png
-```
-
----
-
 # ERD
 
-ERD aplikasi tersedia pada folder:
+ERD aplikasi berupa PNG dan PDF tersedia pada folder:
 
 ```text
-/erd
+/backend/ERD/
 ```
 
 ---
