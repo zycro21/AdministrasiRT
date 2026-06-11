@@ -33,16 +33,6 @@ Sistem ini dibuat untuk membantu pengelolaan administrasi RT pada sebuah perumah
 
 ---
 
-# Struktur Project
-
-```
-.
-├── backend
-└── frontend
-```
-
----
-
 # Persyaratan Sistem
 
 Pastikan sudah terinstall:
@@ -52,6 +42,32 @@ Pastikan sudah terinstall:
 * MySQL
 * Node.js 20+
 * NPM
+
+---
+
+# Clone Repository
+
+Clone repository terlebih dahulu:
+
+```bash
+git clone https://github.com/zycro21/AdministrasiRT.git
+```
+
+Masuk ke folder project:
+
+```bash
+cd AdministrasiRT
+```
+
+Struktur project:
+
+```text
+AdministrasiRT
+├── backend
+└── frontend
+```
+
+Setelah proses clone selesai, lanjutkan ke proses instalasi backend dan frontend pada langkah berikutnya.
 
 ---
 

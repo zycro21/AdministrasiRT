@@ -18,7 +18,7 @@ function ProtectedRoute({ children }) {
 function GuestRoute({ children }) {
   const { user, loading } = useAuth()
   if (loading) return <div className="min-h-screen bg-slate-50" />
-  return !user ? children : <Navigate to="/dashboard" replace />
+  return !user ? children : <Navigate to="/overview" replace />
 }
 
 export default function App() {
