@@ -145,12 +145,6 @@ Seeder akan membuat:
 Jalankan:
 
 ```bash
-php artisan db:seed
-```
-
-Atau reset database sekaligus:
-
-```bash
 php artisan migrate:fresh --seed
 ```
 
@@ -175,25 +169,6 @@ Backend berjalan pada:
 
 ```text
 http://localhost:8000
-```
-
----
-
-# Dokumentasi API
-
-Endpoint API menggunakan prefix:
-
-```text
-/api
-```
-
-Contoh:
-
-```text
-POST /api/login
-GET  /api/residents
-GET  /api/houses
-GET  /api/dashboard/summary
 ```
 
 ---
@@ -226,6 +201,7 @@ Isi dengan:
 
 ```env
 VITE_API_URL=http://localhost:8000/api
+VITE_STORAGE_URL=http://localhost:8000/storage
 ```
 
 Jika backend berjalan pada host berbeda, sesuaikan URL di atas.
